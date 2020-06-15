@@ -1,0 +1,29 @@
+<div class = "header">
+    <nav>
+        <a href = "/">Homepage</a>
+        
+        {{#if loggedIn}}
+            <a href = "/dashboard">Dashboard</a>
+            <a id = "logout">Logout</a>
+        {{else}}
+            <a href = "/login">Dashboard</a>
+            <a href = "/login">Login</a>
+        {{/if}}
+    </nav>
+    <h1 id = "title">The Tech Blog</h1>
+</div>
+
+
+ <div class="card">
+    <h3 class="card-header">Login</h3>
+        <form id="login-form" class="card-body">
+            <label class="form-label" for="username-login">Username</label>
+            <input  id="username-login" type="text" autofocus="true" class="form-input" />
+            <label class="form-label" for="password-login">Password</label>
+            <input id="password-login" type="password" autofocus="true" class="form-input" />
+            <button type="submit" class="btn">Login!</button>
+            <a class="login-link" href="/signup">Sign up instead</a>
+        </form>
+</div>
+
+<script src="/javascript/login.js"></script>

@@ -1,0 +1,26 @@
+<div class = "header">
+    <nav>
+        <a href = "/">Homepage</a>
+        <a href = "/dashboard">Dashboard</a>
+        {{#if loggedIn}}
+            <a href = "" id = "logout">Logout</a>
+        {{else}}
+            <a hrer = "/login">Login</a>
+        {{/if}}
+    </nav>
+    <h1 id = "title">The Tech Blog</h1>
+</div>
+
+
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+    {{#each posts as |post|}}
+      {{> dashboard-postinfo post}}
+      {{!-- <a href="/dashboard/edit/{{post.id}}">Edit post</a> --}}
+    {{/each}}
+</section>
+{{/if}}
+<button type="submit" class="btn"><a class="link" id = "new-post-form" href="/dashboard/new">+ New Post</a></button>
+
+<script src="/javascript/add-post.js"></script>

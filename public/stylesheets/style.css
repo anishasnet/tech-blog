@@ -27,7 +27,9 @@ nav a {
     padding-left: 0px;
     text-decoration: none;
 }
-
+a {
+    text-decoration: none;
+}
 #title {
     background-color: var(--mint-green);
     border-radius: 8px;
@@ -69,7 +71,8 @@ ul {
 
 .card-text {
     padding: 30px;
-    font-size: 22px
+    font-size: 22px;
+    color: var(--dark-brown);
 }
 
 .form-container {

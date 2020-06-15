@@ -2,7 +2,11 @@
     <nav>
         <a href = "/">Homepage</a>
         <a href = "/dashboard">Dashboard</a>
-        <a href = "/login">Login</a>
+        {{#if loggedIn}}
+            <a href = "/login">Login</a>
+        {{else}}
+            <a id = "logout">Logout</a>
+        {{/if}}
     </nav>
     <h1 id = "title">The Tech Blog</h1>
 </div>
@@ -13,10 +17,10 @@
         <h2 class = "card-header">
             {{post.title}}
             <span class = "card-creater">
-                Created by {{post.user.username}} on {{post.created_at}}
+                Created by {{post.user.username}} on {{format_date post.created_at}}
             </span>
         </h2>
-        <p class = "card-text">{{post.text}}</p>
+        <p class = "card-text">{{post.content}}</p>
         <h3 class = "num-comments">{{post.comments.length}} comment(s)</h3>
     </div>
     <div>
@@ -24,7 +28,7 @@
         <div class = "comments">
              {{#each post.comments}}
              <div class = "comment">
-                 <p class = "comment-author">{{user.username}} on {{created_at}}</p>
+                 <p class = "comment-author">{{user.username}} on {{format_date created_at}}</p>
                  <h2 class = "comment-text">{{comment_text}}</h2>
              </div>
              {{/each}}
