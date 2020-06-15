@@ -1,0 +1,148 @@
+:root {
+    --dark-brown: #24100f;
+    --mint-green: #daead3;
+}
+
+* {
+    font-family: 'Arial';
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--mint-green)
+}
+
+.header {
+    padding: 20px 30px;
+    background-color: var(--dark-brown);
+}
+
+nav a {
+    font-size: 24px;
+    color: var(--mint-green);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 15px;
+    padding-left: 0px;
+    text-decoration: none;
+}
+
+#title {
+    background-color: var(--mint-green);
+    border-radius: 8px;
+    padding: 8px 16px;
+    color: var(--dark-brown);
+    display: inline-block;
+    margin: 30px 0;
+    font-size: 50px
+}
+
+.card-container {
+    padding: 100px;
+    background-color: var(--mint-green);
+}
+
+ul {
+    list-style-type: none;
+}
+
+.post-link {
+    text-decoration: none;
+}
+.card {
+    width: 100%;
+    border: 5px solid var(--dark-brown);
+    background-color: var(--mint-green);
+    margin: 15px 0;
+}
+.card-header {
+    background-color: var(--dark-brown);
+    color: var(--mint-green);
+    text-align: left;
+    padding: 10px 15px;
+}
+
+.card-creater {
+    float: right;
+}
+
+.card-text {
+    padding: 30px;
+    font-size: 22px
+}
+
+.form-container {
+    /* padding: 100px; */
+    color: var(--dark-brown);
+    margin: 100px 40%;
+}
+
+.form-container label {
+    font-size: 22px;
+}
+
+.form-container input {
+    width: 250px;
+    height: 25px;
+}
+
+.form-container #signup {
+    padding: 10px 20px;
+    border: 2px solid var(--dark-brown);
+    text-align: center;
+    margin: 0 20%;
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+.form-container #signup:hover {
+    background-color: var(--dark-brown);
+    color: var(--mint-green);
+    transition-duration: 0.3s
+}
+
+.num-comments {
+    background-color: var(--dark-brown);
+    padding: 2px 10px;
+    color: var(--mint-green);
+}
+
+.comment {
+    width: 100%;
+    border-top: 2px solid var(--dark-brown);
+    border-bottom: 2px solid var(--dark-brown);
+    border-left: none;
+    border-right: none;
+    padding: 10px 20px;
+}
+
+.comment-author {
+    font-size: 20px;
+    color: var(--dark-brown);
+}
+
+.comment-text {
+    color: var(--dark-brown);
+    font-size: 24px;
+}
+
+#comment-box {
+    margin: 20px 0;
+    font-size: 22px;
+    padding: 5px;
+}
+
+#add-comment {
+    font-size: 22px;
+    border: 2px solid var(--dark-brown);
+    padding: 5px 10px;
+    color: var(--dark-brown);
+}
+
+#add-comment:hover {
+    background-color: var(--dark-brown);
+    color: var(--mint-green);
+    transition-duration: 0.3s;
+}
