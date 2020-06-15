@@ -6,8 +6,8 @@ This is a fullstack tech blog where users can create accounts, post content, com
 
 ## Table of Contents
 * [Installation](#installation)
-* [Application] (#application) 
-* [Preview] (#preview)
+* [Application](#application) 
+* [Preview](#preview)
 * [Usage](#usage)
 * [License](#license)
 * [Questions](#questions)
