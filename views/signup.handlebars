@@ -1,12 +1,26 @@
-<div class="card">
-    <h3 class="card-header">Sign Up</h3>
-    <form id="signup-form" class="card-body">
-        <label for="username-signup" class="form-label">Username</label>
-        <input id="username-signup" type="text" class="form-input" />
-        <label class="form-label" for="password-signup">Password</label>
-        <input  id="password-signup" type="password" class="form-input" />
-        <button type="submit" class="btn">Signup!</button>
-        <a class="login-link" href="/login">Log in instead</a>
+{{!-- <div class = "header">
+    <nav>
+        <a href = "/">Homepage</a>
+        <a href = "/dashboard">Dashboard</a>
+        <a href = "/login">Login</a>
+    </nav>
+    <h1 id = "title">The Tech Blog</h1>
+</div> --}}
+
+<div class = "form-container">
+    <form class = "signup-form">
+        <div>
+            <label for="username-signup">Username: </label><br>
+            <input type = "text" id = "username-signup" name = "username-signup">
+        </div><br>
+        <div>
+            <label for = "password-signup">Password: </label><br>
+            <input type = "password" id = "password-signup" name = "password-signup">
+        </div><br>
+        <div>
+            <button type = "submit" id = "signup">Signup</button><br><br>
+            <a id = "login-link" href = "/login">Login instead</a>
+        </div>
     </form>
 </div>
 
