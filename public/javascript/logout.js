@@ -12,3 +12,4 @@ async function logout() {
       alert(response.statusText);
     }
 }
+  

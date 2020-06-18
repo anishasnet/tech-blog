@@ -1,26 +1,49 @@
-<div class = "header">
-    <nav>
-        <a href = "/">Homepage</a>
-        <a href = "/dashboard">Dashboard</a>
-        {{#if loggedIn}}
-            <a href = "" id = "logout">Logout</a>
-        {{else}}
-            <a hrer = "/login">Login</a>
-        {{/if}}
-    </nav>
-    <h1 id = "title">The Tech Blog</h1>
+<div class = "card-container">
+    {{#if posts.length}}
+        <ul>
+            {{#each posts}}
+            <li>
+                <a class = "post-link" href = "/post/{{id}}">
+                    <div class = "card">
+                        <h2 class = "card-header">
+                            {{title}}
+                            <span class = "card-creater">
+                                Created by {{user.username}} on {{format_date created_at}}
+                            </span>
+                        </h2>
+                        <p class = "card-text">{{text}}</p>
+                        <a href = "/dashboard//edit/{{id}}">
+                            <h3 class = "card-header">
+                                Edit post
+                            </h3>
+                        </a>
+                    </div>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    {{/if}}
+    
+    <div class = "card">
+        <h2 class = "card-header">
+            Create a Post
+        </h2>
+        <div class = "form-container">
+            <form class = "login-form">
+                <div>
+                    <label for="post-title">Title: </label><br>
+                    <input type = "text" id = "post-title" name = "post-title">
+                </div><br>
+                <div>
+                    <label for = "post-text">Text: </label><br>
+                    <textarea id = "post-text" name = "post-text" rows = "4" cols = "37"></textarea>
+                </div><br>
+                <div>
+                    <button id = "create">Create</button><br><br>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
-
-
-{{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-    {{#each posts as |post|}}
-      {{> dashboard-postinfo post}}
-      {{!-- <a href="/dashboard/edit/{{post.id}}">Edit post</a> --}}
-    {{/each}}
-</section>
-{{/if}}
-<button type="submit" class="btn"><a class="link" id = "new-post-form" href="/dashboard/new">+ New Post</a></button>
 
 <script src="/javascript/add-post.js"></script>

@@ -13,6 +13,10 @@ body {
     background-color: var(--mint-green)
 }
 
+a {
+    text-decoration: none;
+}
+
 .header {
     padding: 20px 30px;
     background-color: var(--dark-brown);
@@ -27,9 +31,11 @@ nav a {
     padding-left: 0px;
     text-decoration: none;
 }
-a {
-    text-decoration: none;
+
+#login {
+    cursor: pointer;
 }
+
 #title {
     background-color: var(--mint-green);
     border-radius: 8px;
@@ -88,9 +94,16 @@ ul {
 .form-container input {
     width: 250px;
     height: 25px;
+    padding: 2px 5px;
+    font-size: 20px
 }
 
-.form-container #signup {
+textarea {
+    padding: 2px 5px;
+    font-size: 20px;
+}
+
+.form-container #signup, #login, #create, #save, #delete {
     padding: 10px 20px;
     border: 2px solid var(--dark-brown);
     text-align: center;
@@ -100,11 +113,33 @@ ul {
     cursor: pointer;
 }
 
-.form-container #signup:hover {
+#delete {
+    margin: 0 16%;
+    border: 2px solid #dc3645;
+}
+
+#delete:hover {
+    background-color: #dc3645;
+    color: white;
+    transition-duration: 0.3s; 
+}
+
+.form-container #signup:hover, #login:hover, #create:hover, #save:hover{
     background-color: var(--dark-brown);
     color: var(--mint-green);
     transition-duration: 0.3s
 }
+
+#signup-link, #login-link {
+    margin: 20px 15%;
+    text-decoration: none;
+    color: var(--dark-brown);
+    font-size: 22px;
+}
+
+/* #signup-link:hover, #login-link:hover {
+    text-decoration: underline;
+} */
 
 .num-comments {
     background-color: var(--dark-brown);
@@ -148,4 +183,12 @@ ul {
     background-color: var(--dark-brown);
     color: var(--mint-green);
     transition-duration: 0.3s;
+}
+
+#heading {
+    color: var(--dark-brown);
+}
+
+#heading {
+    margin: 10px;
 }

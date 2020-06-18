@@ -3,7 +3,7 @@ document.getElementById('signup').addEventListener('click', signupFormHandler);
 async function signupFormHandler(event) {
     event.preventDefault();
     const username = document.getElementById('username-signup').value.trim();
-    // const email = document.getElementById('email-signup').value.trim();
+    
     const password = document.getElementById('password-signup').value.trim();
 
     if (username && password) {
@@ -21,3 +21,4 @@ async function signupFormHandler(event) {
         }
     }
 }
+

@@ -1,33 +1,10 @@
-<div class = "header">
-    <nav>
-        <a href = "/">Homepage</a>
-        
-        {{#if loggedIn}}
-            <a href = "/dashboard">Dashboard</a>
-            <a id = "logout">Logout</a>
-        {{else}}
-            <a href = "/login">Dashboard</a>
-            <a href = "/login">Login</a>
-        {{/if}}
-    </nav>
-    <h1 id = "title">The Tech Blog</h1>
-</div>
+
 
 <div class = "card-container">
     <ul>
-        {{#each posts}}
+        {{#each posts as |post|}}
         <li>
-            <a href = "/post/{{id}}">
-                <div class = "card">
-                    <h2 class = "card-header">
-                        {{title}}
-                        <span class = "card-creater">
-                            Created by {{user.username}} on {{format_date created_at}}
-                        </span>
-                    </h2>
-                    <p class = "card-text">{{content}}</p>
-                </div>
-            </a>
+            {{> post-info post }}
         </li>
         {{/each}}
     </ul>
